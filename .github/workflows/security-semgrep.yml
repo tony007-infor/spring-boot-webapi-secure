@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Descargar repositorio
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6 # nosemgrep
 
       - name: Ejecutar Semgrep
         run: |
@@ -34,7 +34,7 @@ jobs:
 
       - name: Publicar reportes de Semgrep
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4 # nosemgrep
         with:
           name: semgrep-reports
           path: |

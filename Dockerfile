@@ -5,5 +5,5 @@ COPY target/springboot-devsecops-lab-1.0.0.jar app.jar
 
 EXPOSE 8080
 ENV LAB_ADMIN_PASSWORD=Admin123!
-
+USER 1000
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
